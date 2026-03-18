@@ -32,16 +32,40 @@ class WeakestLinkGUI:
         
         self.correct_button = ctk.CTkButton(
             self.root, 
-            text="Poprawna odpowiedź", 
+            text="Correct Answer", 
             fg_color="green", hover_color="darkgreen",
             command=self.handle_correct
         )
         self.correct_button.pack(pady=10)
 
+        self.incorrect_button = ctk.CTkButton(
+            self.root, 
+            text="Incorrect Answer", 
+            fg_color="red", hover_color="darkred",
+            command=self.handle_incorrect
+        )
+        self.incorrect_button.pack(pady=10)
+
+        self.bank_button = ctk.CTkButton(
+            self.root, 
+            text="Bank", 
+            fg_color="grey", hover_color="yellow",
+            command=self.handle_bank
+        )
+        self.bank_button.pack(pady=10)
+
     
     def handle_correct(self):
         self.logic.answer_correct()
         self.update_ui() 
+
+    def handle_incorrect(self):
+        self.logic.answer_incorrect()
+        self.update_ui()
+
+    def handle_bank(self):
+        self.logic.bank()
+        self.update_ui()
         
     def update_ui(self):
         self.player_label.configure(text=f"Current Player: {self.logic.get_current_player()}")

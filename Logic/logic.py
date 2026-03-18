@@ -47,4 +47,7 @@ class Logic:
         self.bank_val += self._chain[self._current_chain]
         self._current_chain = 0
         self._current_player = (self._current_player + 1) % len(self._players)
+        if self.bank_val >= 1000:
+            print("Congratulations! You've reached 1000 points and won the game!")
+            self.bank_val = 0
     

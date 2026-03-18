@@ -9,7 +9,7 @@ if __name__ == "__main__":
 
     app = ctk.CTk()
 
-    players = ["Player 1", "Player 2", "Player 3"]  # Example player names
+    players = ["Player 1", "Player 2", "Player 3"]
     game_logic = Logic(players)
     gui = WeakestLinkGUI(app, game_logic)
 
