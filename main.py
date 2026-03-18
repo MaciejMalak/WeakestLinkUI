@@ -1,9 +1,16 @@
+import customtkinter as ctk
 from Logic.logic import Logic
 from Logic.iterate import GameIteration
+from gui import WeakestLinkGUI
 
 if __name__ == "__main__":
-    players = ["Alice", "Bob", "Charlie"]
-    game_logic = Logic(players)
+    ctk.set_appearance_mode("dark")
+    ctk.set_default_color_theme("blue")
 
-    game_iter = GameIteration()
-    game_iter.iteration(game_logic, 100)  # Run the game for a maximum of 100 iterations
+    app = ctk.CTk()
+
+    players = ["Player 1", "Player 2", "Player 3"]  # Example player names
+    game_logic = Logic(players)
+    gui = WeakestLinkGUI(app, game_logic)
+
+    app.mainloop()
