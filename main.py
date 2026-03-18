@@ -1,9 +1,9 @@
-from Logic.logic import logic
-from Logic.iterate import game_iteration
+from Logic.logic import Logic
+from Logic.iterate import GameIteration
 
 if __name__ == "__main__":
     players = ["Alice", "Bob", "Charlie"]
-    game_logic = logic(players)
+    game_logic = Logic(players)
 
-    game_iter = game_iteration()
+    game_iter = GameIteration()
     game_iter.iteration(game_logic, 100)  # Run the game for a maximum of 100 iterations

@@ -1,7 +1,7 @@
-from Logic.logic import logic
+from Logic.logic import Logic
 
-class game_iteration:
-    def iteration(self, game_logic: logic, num_iterations: int) -> bool:
+class GameIteration:
+    def iteration(self, game_logic: Logic, num_iterations: int) -> bool:
         """Handles a single iteration of the game, prompting the user for input and updating the game state accordingly."""
 
         for _ in range(num_iterations):
@@ -18,7 +18,8 @@ class game_iteration:
                 print("Quitting the game.")
                 return False
             else:
-                raise ValueError("Invalid option. Please choose 1, 2, or 3.")
+                print("Invalid option. Please choose 1, 2, 3, or 4.")
+                continue
             
             # Print the current game state after processing the user's choice
             print("\nCurrent player:", game_logic.get_current_player())

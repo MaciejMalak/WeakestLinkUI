@@ -1,4 +1,4 @@
-class logic:
+class Logic:
     def __init__(self, players: list[str]):
         self._current_player = 0
         self._players = players
