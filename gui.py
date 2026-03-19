@@ -54,7 +54,19 @@ class WeakestLinkGUI:
         )
         self.bank_button.pack(pady=10)
 
+        self.stats_button = ctk.CTkButton(
+            self.root,
+            text="Show Stats",
+            fg_color="blue", hover_color="darkblue",
+            command=self.handle_stats
+        )
+        self.stats_button.pack(pady=10)
+
     
+    def handle_stats(self):
+        print("\nCurrent player: ", self.logic._players)
+        print("Overall scores: ", self.logic._overall_score)
+
     def handle_correct(self):
         self.logic.answer_correct()
         self.update_ui() 

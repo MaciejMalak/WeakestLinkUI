@@ -1,6 +1,5 @@
 import customtkinter as ctk
 from Logic.logic import Logic
-from Logic.iterate import GameIteration
 from gui import WeakestLinkGUI
 
 if __name__ == "__main__":
