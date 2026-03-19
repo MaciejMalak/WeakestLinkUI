@@ -7,9 +7,9 @@ WeakestLinkUI is a user interface application for the Weakest Link game. This ea
 
 ## Features
 
-- Player management and tracking
-- Question display system
-- Round-based elimination
+- Player management and tracking (TODO)
+- Question display system (TODO)
+- Round-based elimination (TODO)
 - Score calculation
 
 ## Status
